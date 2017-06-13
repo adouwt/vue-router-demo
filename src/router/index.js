@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import home from '@/components/home'
 import page01 from '@/components/page01'
 import page02 from '@/components/page02'
+import page03 from '@/components/page03'
 import page01A from '@/components/page01/page01-A'
 import page01B from '@/components/page01/page01-b'
 import pageEnd from '@/components/page01/B/end'
@@ -55,6 +56,11 @@ export default new Router({
       path: '/page02',
       name: 'page02',
       component: page02
+    },
+    {
+      path: '/page03',
+      name: 'page03',
+      component: page03
     }
   ]
 })

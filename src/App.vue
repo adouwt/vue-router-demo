@@ -4,6 +4,7 @@
     <ul class="home-nav">
       <li v-for="item in links"><a @click="$goRoute(item.route)">{{item.text}}</a></li>
     </ul>
+    <!-- 路由匹配的渲染内容在这里体现 -->
     <router-view></router-view>
   </div>
 </template>
@@ -25,6 +26,10 @@
           {
             text: '第三页',
             route: '/page02'
+          },
+          {
+            text: '第四页',
+            route: '/page03'
           }
         ]
       }

@@ -4,6 +4,7 @@
     <ul class="text-center spacing" style="padding: 0">
       <li v-for="item in links"><a @click="$goRoute(item.route)">{{item.text}}</a></li>
     </ul>
+    <!-- 下面路由匹配的渲染内容在这里体现 -->
     <router-view></router-view>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
       title: '这里是第二个页面',
       links: [
         {
-          text: '失恋了',
+          text: '又犯错了',
           route: '/page01/page01-a'
         },
         {
