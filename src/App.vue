@@ -1,6 +1,20 @@
 <template>
   <div>
     <h3>首页导航栏</h3>
+    <div>
+      <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1"><a href="/">处理中心</a></el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">我的工作台</template>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3"><a href="" >订单管理</a></el-menu-item>
+        <el-menu-item index="4"><a href="" >第三个</a></el-menu-item>
+        <el-menu-item index="5"><a href="" >第四个</a></el-menu-item>
+      </el-menu>
+    </div>
     <ul class="home-nav">
       <li v-for="item in links"><a @click="$goRoute(item.route)">{{item.text}}</a></li>
     </ul>
@@ -31,7 +45,14 @@
             text: '第四页',
             route: '/page03'
           }
-        ]
+        ],
+        activeIndex: '1',
+        activeIndex2: '1'
+      }
+    },
+    methods: {
+      handleSelect (key, keyPath) {
+        console.log(key, keyPath)
       }
     }
   }
